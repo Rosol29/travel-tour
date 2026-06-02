@@ -3,14 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+    background-image: url("https://wallpapercave.com/wp/wp4069424.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 nav {
-    background-color: #93A29B;
-    padding: 20px;
+    background-color: #03381f;
+    padding: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color:white;
+    box-shadow: #7ee4b4;
+    opacity: 1;
     
   }
   nav ul {
@@ -26,7 +35,7 @@ nav {
   nav a {
     text-decoration: none;
     color:white;
-    font-weight: bold;
+    font-weight: lighter;
   }
 
   body {
@@ -41,16 +50,29 @@ nav {
     border-radius: 30px;
     border:0;
     overflow: hidden;
+    max-width: 200px;
+    background-color: white;
     
     
   }
-  
+  #searchBox{
+    background-color: white;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+
+.btn{
+    color: #03381f;
+    padding: 12px;
+}
   button {
     padding: 7px 15px;
-    background-color: #4CAF50;
+    background-color: #066309;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 12px;
   }
   
   button:hover {
