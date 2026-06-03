@@ -6,7 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     /* margin: 20px; */
-    background-image: url("https://wallpapercave.com/wp/wp4069424.jpg");
+    background-image: url("https://t4.ftcdn.net/jpg/11/47/01/09/360_F_1147010942_o34pxsoxoisTejzaMTMexe5xYEGgcm18.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -77,4 +77,33 @@ nav {
   
   button:hover {
     background-color: #45a049;
+  }
+
+  #travelBox{
+    color:white;
+    margin: 70px;
+    margin-top: 100px;
+  }
+
+  #dreamTravel{
+font-size: large;
+font-style: italic;
+text-decoration:line-through;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    font-weight: 800;
+    text-decoration: solid;
+    overflow:visible;
+    text-shadow:2px 2px gray;
+  }
+  #infoTravel{
+    padding: 20px;
+   text-align:justify;
+   font-size: small;
+   font-weight:normal;
+   box-sizing:content-box;
+   width: 800px;
+  resize: both;
+  overflow: auto;
+   
   }
