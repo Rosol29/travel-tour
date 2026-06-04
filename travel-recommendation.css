@@ -6,26 +6,35 @@
 body {
     font-family: Arial, sans-serif;
     /* margin: 20px; */
-    background-image: url("https://t4.ftcdn.net/jpg/11/47/01/09/360_F_1147010942_o34pxsoxoisTejzaMTMexe5xYEGgcm18.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(244, 235, 235, 0.5)),url("https://t4.ftcdn.net/jpg/11/47/01/09/360_F_1147010942_o34pxsoxoisTejzaMTMexe5xYEGgcm18.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    opacity: 2;
+   
   }
+
 nav {
-    background-color: #03381f;
+    background-color: #09633a;
+    
     padding: 12px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     color:white;
     box-shadow: #7ee4b4;
-    opacity: 1;
+   
     
   }
   nav ul {
     list-style-type: none;
     /* padding: 0; */
+    justify-content: center;
+    padding-left:150px;
+ 
+
   }
+
   
   nav ul li {
     display: inline;
@@ -80,10 +89,16 @@ nav {
   }
 
   #travelBox{
+    display: flex;
+    
     color:white;
     margin: 70px;
     margin-top: 100px;
   }
+#insidebox{
+    display: flex;
+    flex-direction: column;
+}
 
   #dreamTravel{
 font-size: large;
@@ -107,3 +122,27 @@ text-decoration:line-through;
   overflow: auto;
    
   }
+#icontravel {
+    display: flex;
+    flex-direction: column; /* Stacks the icons vertically */
+    align-items: center;    /* Centers them horizontally in the column */
+    justify-content: center;
+    gap: 20px;              /* Spacing between icons */
+    padding: 20px;
+    width: max-content;     /* Keeps the container tight around the icons */
+
+    border-radius: 8px;
+   
+}
+
+#aboutText{
+    font-size: 60px;
+    color: white;
+   
+  
+}
+
+#travelInfo{
+    color:white;
+    padding-left: 50px;
+}
