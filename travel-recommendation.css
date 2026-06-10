@@ -176,3 +176,40 @@ text-decoration:line-through;
    margin-top: 30px;
    
 }
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-left:280px;
+}
+#name{
+    color: white;
+    opacity: 0.1;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 300px;
+}
+#email{
+    color: white;
+    opacity: 0.1;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 140px;
+}
+
+#message{
+    color: white;
+    opacity: 0.1;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 140px;
+
+}
+
+#contactMessage{
+    padding-right:260px;
+    font-weight: 100;
+ 
+   
+}

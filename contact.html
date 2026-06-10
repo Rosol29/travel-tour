@@ -31,11 +31,30 @@
            <br/>
             <h1 id="aboutText">Contact Us</h1>
            <br/> <p>Get to touch</p>
-
+  
         </div>
-        <label>Name</label>
+     
        
         <div>
+     <div id="contact">
+        <form id="contactForm">
+            <div>
+              <label for="name">Name</label><br>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <br>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div>
+              <label for="message">Message</label><br>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" id="contactMessage" onclick="thankyou()">Submit</button>
+          </form>
+       </div>
         </div>
     </div>
 
