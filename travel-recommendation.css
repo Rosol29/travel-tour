@@ -51,7 +51,7 @@ nav {
     font-family: Arial, sans-serif;
     /* margin: 20px; */
   }
-  input[type="text"],
+  #conditonInput
   input[type="number"],
   select {
     width: 200px;
@@ -68,6 +68,7 @@ nav {
     background-color: white;
     padding: 12px;
     border-radius: 20px;
+    border: 0;
   }
 
 
@@ -184,14 +185,14 @@ text-decoration:line-through;
     margin-left:280px;
 }
 #name{
-    color: white;
+    color: black;
     opacity: 0.1;
     border-radius: 5px;
     padding: 10px;
-    padding-right: 300px;
+    padding-right: 80px;
 }
 #email{
-    color: white;
+    color: black;
     opacity: 0.1;
     border-radius: 5px;
     padding: 10px;
@@ -199,7 +200,7 @@ text-decoration:line-through;
 }
 
 #message{
-    color: white;
+    color: black;
     opacity: 0.1;
     border-radius: 5px;
     padding: 10px;
