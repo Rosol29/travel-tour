@@ -214,3 +214,8 @@ text-decoration:line-through;
  
    
 }
+#result{
+    padding: 30px;
+    font-size: large;
+    color :white;
+}
