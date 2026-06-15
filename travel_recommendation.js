@@ -5,6 +5,7 @@ function searchCondition() {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
 
+
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
@@ -16,6 +17,18 @@ function searchCondition() {
                 const subcity=country[i].cities;
                 for(let j=0; j<2 ;j++){
                const city=subcity[j].name;
+               const imageu=subcity[j].imageUrl;
+               const descriptioncity=subcity[j].description || subcity[j][""];
+               resultDiv.innerHTML +=`<div class="card">
+               <img src="${imageu}" style="width:100%; height:100%" alt="hjh">
+               <h3><b>${city}</b></h3>
+               <p>${descriptioncity}</p>
+               </div>`;
+            //    resultDiv.innerHTML += `<img src="${imageu}" alt="hjh">`;
+
+            //    resultDiv.innerHTML +=`<h1>${city}</h1>`;
+               
+
                console.log('city name',city)
                 }
             

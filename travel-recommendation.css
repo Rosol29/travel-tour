@@ -215,7 +215,25 @@ text-decoration:line-through;
    
 }
 #result{
+    display: grid;                                     /* 1 */
+    grid-template-columns: repeat(3, 350px);            /* 2 */
+    grid-auto-rows: 330px;                              /* 3 */
+    grid-gap: 50px;                                    /* 4 */
+    width: 350px;
+  
     padding: 30px;
-    font-size: large;
-    color :white;
+    font-size: medium;
+    color :black;
 }
+.card {
+    opacity: 0.8;
+ background-color: white;
+ padding-top: 30px;
+ padding:20px;
+ border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
