@@ -8,31 +8,28 @@ function searchCondition() {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const country = data.countries.find(item => item.name === input);
-        console.log('country',country)
+        const country = data.countries;
+        console.log('country',country);
+        if(input === "country"){
+           
+            for(let i=0; i<= country.length-1; i++){
+                const subcity=country[i].cities;
+                for(let j=0; j<2 ;j++){
+               const city=subcity[j].name;
+               console.log('city name',city)
+                }
+            
 
-        if (country) {
-          const name = country.name;
-          const citiesName = country.cities[0].name;
-          const imageUrl = country.cities[0].imageUrl;
-          const citiesdescription = country.cities[0][""];
+                // console.log('name',subcity)
+          
+                // console.log('city2 name',city2)
 
-
-        console.log('country',citiesdescription)
-
-        
-
-          resultDiv.innerHTML += `<h2>${name}</h2>`;
-          resultDiv.innerHTML += `<h2>${citiesName}</h2>`;
-          resultDiv.innerHTML += `<img src="${country.cities[0].imageUrl}" alt="hjh">`;
-          resultDiv.innerHTML += `<h2>${citiesdescription}</h2>`;
-
-         
-
-         
-        } else {
-          resultDiv.innerHTML = 'country not found.';
+                
+            }
+           
         }
+    
+
       })
       .catch(error => {
         console.error('Error:', error);
