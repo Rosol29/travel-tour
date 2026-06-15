@@ -1,5 +1,39 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnClear = document.getElementById('clearbtn');
 
+const timeCountries=[
+    {
+        city:"Sydney, Australia",
+        timeZone:"Australia/Sydney"
+},
+{
+    city:"Melbourne, Australia",
+    timeZone:"Australia/Melbourne"
+},
+{
+    city:"Tokyo, Japan",
+    timeZone:"Asia/Tokyo"
+},
+{
+    city:"Kyoto, Japan",
+    timeZone:"Asia/Tokyo"
+},
+{
+    city:"Rio de Janeiro, Brazil",
+    timeZone:"America/Sao_Paulo"
+},
+{
+    city:"São Paulo, Brazil",
+    timeZone:"America/Sao_Paulo"
+},
+];
+
+
+function clearbutton() {
+    document.getElementById("conditonInput").value = "";
+   document.getElementById('result').innerHTML="";
+
+  }
 function searchCondition() {
     const input = document.getElementById('conditonInput').value;
     const resultDiv = document.getElementById('result');
@@ -20,15 +54,32 @@ function searchCondition() {
         if(input === "country"){
            
             for(let i=0; i<= country.length-1; i++){
+            
                 const subcity=country[i].cities;
                 for(let j=0; j<2 ;j++){
+                    
                const city=subcity[j].name;
                const imageu=subcity[j].imageUrl;
                const descriptioncity=subcity[j].description || subcity[j][""];
+               timeCountries.forEach(timeCountries=>{
+                const currentTime=new Date().toLocaleTimeString("en-US",{
+                    timeZone:timeCountries.timeZone,
+                    hour:"2-digit",
+                    minute:"2-digit",
+                    second:"2-digit",
+                    hour12:true
+                });
+                console.log(`${timeCountries.city}:${currentTime}`)
+               })
+
                resultDiv.innerHTML +=`<div class="card">
                <img src="${imageu}" style="width:100%; height:200px" alt="hjh">
                <h3><b>${city}</b></h3>
                <p>${descriptioncity}</p>
+               <p style="color:green"> Local Time: 
+                ${new Date().toLocaleTimeString("en-US",{
+                    timeZone:timeCountries.timeZone})
+                }</p>
                </div>`;
 
                console.log('city name',city)
@@ -87,4 +138,13 @@ function searchCondition() {
         resultDiv.innerHTML = 'An error occurred while fetching data.';
       });
   }
+
+
     btnSearch.addEventListener('click', searchCondition);
+    btnClear.addEventListener('click', clearbutton);
+
+
+    const options = { timeZone: 'America/New_York', hour12: true,
+     hour: 'numeric', minute: 'numeric', second: 'numeric' };
+	const newYorkTime = new Date().toLocaleTimeString('en-US', options);
+	console.log("Current time in New York:", newYorkTime);
